@@ -23,6 +23,8 @@ function showSectionById(id) {
   document.getElementById(id).classList.remove("hidden");
 }
 
+// ------------------------------------------
+
 // ---------------------Available-Balance-Function----------------
 
 // function getTextFieldValueById(id) {

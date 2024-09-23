@@ -13,6 +13,7 @@ document
 
     const newAddBalance = getInputFieldValueById("input-add-balance");
     const currentAmount = getTextFieldValueById("current-balance");
+    // --------------------------------------
 
     // -------------------------------
     if (currentAmount >= newAddBalance) {
@@ -48,3 +49,5 @@ document
     showSectionById("transaction-section");
     button.classList.toggle("active");
   });
+
+// --------------------------------------------------

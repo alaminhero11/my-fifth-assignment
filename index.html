@@ -74,7 +74,8 @@
         <!-- ---------------Header-Section-03--------------- -->
         <section class="backdrop-invert-0 bg-white/70">
             <div class="w-8/12 md:w-8/12 lg:w-8/12 mx-auto text-center py-5 md:py-11">
-                <button id="donation-button" class="btn bg-secondary w-32 text-xl font-medium">Donation</button>
+                <button id="donation-button"
+                    class="btn bg-secondary w-32 text-xl font-medium hover:active">Donation</button>
                 <button id="history-button"
                     class="btn btn-outline w-32 text-xl font-medium border-gray-300 hover:bg-secondary hover:border-none">History</button>
             </div>
@@ -200,10 +201,24 @@
             </div>
         </div>
     </section>
+    <!-- --------------------MODAL-SECTION------------- -->
+    <section class="hidden">
+        <!-- Open the modal using ID.showModal() method -->
+        <button id="next-button" class="btn" onclick="my_modal_5.showModal()>open modal</button>
+        <dialog id = " my-modal-5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+            </dialog>
+    </section>
     <!-- ----------------------Transaction-History-Section-END------------------------- -->
-    <!-- --------------------------FOOTER-SECTION------------------------- -->
-    <footer class="bg-primary py-10"></footer>
-    <!-- --------------------------JavaScript-Start-------------------------- -->
     <script src="./js/index.js"></script>
     <script src="./js/others.js"></script>
     <script src="./js/utilities.js"></script>
