@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+
+    <!-- -----------Google-Fonts----------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- -----------CSS File + Tailwind CSS-CDN----------- -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- -----------Tailwind-Script----------- -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(249, 247, 243)',
+                        secondary: 'rgb(180, 244, 97)',
+                        grey: 'rgba(17, 17, 17, 0.05)',
+                        normal: 'rgba(17, 17, 17, 0.7)',
+                        body: '',
+                        accent: '',
+                    },
+                    FontFamily: {
+                        manrope: '',
+                    },
+                    backgroundImage: {
+                        paperBg: "",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- --------------------------HEADER-SECTION-------------------------- -->
+    <!-- ---------------Header-Section-01----------------->
+    <header class="w-full lg:w-full sticky top-0">
+        <div class="bg-primary">
+            <nav class="w-9/12 mx-auto py-8 flex justify-between items-center">
+                <div>
+                    <button class="btn bg-secondary w-32 text-xl font-bold">Blog</button>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center gap-3">
+                        <img class="w-9 h-9" src="./assets/logo.png" alt="logo.png">
+                        <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center gap-3">
+                        <img src="./assets/coin.png" alt="coin.png">
+                        <h3 class="text-xl font-medium text-normal">5500 BDT</h3>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- --------------------------MAIN-SECTION-------------------------- -->
+    <main id="blog-page" class="w-9/12 mx-auto">
+        <!-- ---------------------Important-Section-------------------- -->
+        <section class="mt-16 mb-10">
+            <div class="flex gap-3 items-center">
+                <h1c class="text-2xl font-extrabold mt-3">Important FAQ</h1c>
+                <img src="./assets/question1.png" alt="">
+            </div>
+        </section>
+        <!-- ---------------------Acrodin-Section-------------------- -->
+        <section class="mb-20">
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>The DOM is (Document Object Model). DOM With the HTML , JavaScript can access and change all
+                            the elements of an HTML
+                            document. The HTML DOM model Objects act as a tree. The Document Object Model (DOM) is a
+                            programming API for HTML and
+                            XML documents. It defines the logical structure of documents and the way a document is
+                            accessed and manipulated. In the
+                            DOM specification, the term "document" is used in the broad sense - increasingly, XML is
+                            being used as a way of
+                            representing many different kinds of information that may be stored in diverse systems, and
+                            much of this would
+                            traditionally be seen as data rather than as documents. Nevertheless, XML presents this data
+                            as documents, and the DOM
+                            may be used to manage this data.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>Selecting DOM (Document Object Model) elements is a fundamental aspect of web development
+                            with JavaScript. It allows
+                            developers to interact with and manipulate elements on a webpage dynamically. Proper
+                            selection of elements is crucial
+                            for tasks such as updating content, adding event listeners, or modifying styles.
+                            Finding HTML Elements
+                            Often, with JavaScript, you want to manipulate HTML elements.
+                            <br>
+                        <h3 class="text-xl font-medium text-green-500">To do so, you have to find the elements first.
+                            There are
+                            several ways to do this:</h3>
+                        <ul></ul>
+                        <li>Using HTML elements by id</li>
+                        <li>Using HTML elements by tag name</li>
+                        <li>Using HTML elements by class name</li>
+                        <li>Using HTML elements by CSS selectors</li>
+                        <li>Using HTML elements by HTML object collections</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,
+                        and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>Event Delegation is basically a pattern to handle events efficiently. Instead of adding an
+                            event listener to each and
+                            every similar element, we can add an event listener to a parent element and call an event on
+                            a particular target using
+                            the .target property of the event object.
+                            Event delegation in JavaScript is a pattern that efficiently handles events. Events can be
+                            added to a parent element
+                            instead of adding to every single element. It refers to the process of using event
+                            propagation (bubbling) to handle
+                            events at a higher level in the DOM than the element on which the event originated. This can
+                            be done on a particular
+                            target element using the .target property of an event object.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
+                        styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p> In web development, one of the main features to enable interactivity is DOM Manipulation.
+                            DOM manipulation allows
+                            developers to interact and modify the structure, style, and content of web pages
+                            dynamically.
+                            The below list contains different methods to manipulate DOM.
+                            DOM Element Selectors There are multiple methods available in DOM to select the HTML
+                            elements and manipulate them as
+                            listed below:
+                            <br>
+                        <ul>
+                            <li>querySelector() method: The querySelector( ) method is used to select the first element
+                                that matches the specified
+                                selector provided as an argument.</li>
+                            <li>querySelectorAll() method: The querySelectorAll() method returns a NodeList which
+                                contains all elements that match the
+                                selector within the document.</li>
+                            <li>getElementById( ) method: The getElementId() method is used to select a single element
+                                using its Id.</li>
+                            <li>getElementByClassName( ): The getElementsByClassName() method in JavaScript is used to
+                                select elements in the HTML
+                                document that have a specific class name.</li>
+                            <li>getElementByTagName() method: The getElementsByTagName() method is used to select
+                                elements using the specified tag name.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
