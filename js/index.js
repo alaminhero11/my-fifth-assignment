@@ -17,6 +17,9 @@ inputDonationButton.addEventListener("click", function (event) {
     document.getElementById("current-balance").innerText
   );
 
+  // -----Date-&-Time-Validation-----
+  const dateTime = new Date();
+
   // -----Input-Validation-----
 
   if (inputAddBalance < 0 || !isNaN(inputAddBalance)) {
@@ -26,6 +29,7 @@ inputDonationButton.addEventListener("click", function (event) {
       document.getElementById(
         "transaction-container"
       ).innerText = `${inputAddBalance} Taka is Donated for Donate for Flood at Noakhali, Bangladesh.`;
+      document.getElementById("date-time").innerText = dateTime;
 
       const newBalance = currentBalance + inputAddBalance;
       document.getElementById("current-balance").innerText = newBalance;
