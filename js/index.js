@@ -20,7 +20,6 @@ inputDonationButton1.addEventListener("click", function (event) {
   const dateTime = new Date();
 
   // -----Input-Validation-----
-
   if (inputAddBalance1 < 0 || !isNaN(inputAddBalance1)) {
     if (availableBalance > inputAddBalance1) {
       const newAddBalance = availableBalance - inputAddBalance1;
@@ -32,6 +31,8 @@ inputDonationButton1.addEventListener("click", function (event) {
 
       const newBalance = currentBalance1 + inputAddBalance1;
       document.getElementById("current-balance1").innerText = newBalance;
+      // -----Show-Modal-----
+      document.getElementById("my_modal_5").showModal();
     } else {
       alert("Insufficient Balance!");
     }
@@ -59,7 +60,6 @@ inputDonationButton2.addEventListener("click", function (event) {
   const dateTime = new Date();
 
   // -----Input-Validation-----
-
   if (feniAddBalance < 0 || !isNaN(feniAddBalance)) {
     if (availableBalance > feniAddBalance) {
       const newAddBalance = availableBalance - feniAddBalance;
@@ -71,6 +71,8 @@ inputDonationButton2.addEventListener("click", function (event) {
 
       const newBalance = currentBalance2 + feniAddBalance;
       document.getElementById("current-balance2").innerText = newBalance;
+      // -----Show-Modal-----
+      document.getElementById("my_modal_5").showModal();
     } else {
       alert("Insufficient Balance!");
     }
@@ -98,7 +100,6 @@ inputDonationButton3.addEventListener("click", function (event) {
   const dateTime = new Date();
 
   // -----Input-Validation-----
-
   if (quotaAddBalance < 0 || !isNaN(quotaAddBalance)) {
     if (availableBalance > quotaAddBalance) {
       const newAddBalance = availableBalance - quotaAddBalance;
@@ -110,6 +111,8 @@ inputDonationButton3.addEventListener("click", function (event) {
 
       const newBalance = currentBalance3 + quotaAddBalance;
       document.getElementById("current-balance3").innerText = newBalance;
+      // -----Show-Modal-----
+      document.getElementById("my_modal_5").showModal();
     } else {
       alert("Insufficient Balance!");
     }
@@ -138,4 +141,4 @@ donationButton.addEventListener("click", function () {
   document.getElementById("transaction-section").classList.add("hidden");
   document.getElementById("main-section").classList.remove("hidden");
 });
-// -----------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
