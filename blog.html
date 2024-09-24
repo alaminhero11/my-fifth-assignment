@@ -44,22 +44,22 @@
     <!-- --------------------------HEADER-SECTION-------------------------- -->
     <!-- ---------------Header-Section-01----------------->
     <header class="w-full lg:w-full sticky top-0">
-        <div class="bg-primary">
+        <div class="bg-gradient-to-bl from-rose-100 to-teal-100">
             <nav class="w-9/12 mx-auto py-8 flex justify-between items-center">
                 <div>
                     <button id="home-button" class="btn bg-secondary w-32 text-xl font-bold">Home</button>
                 </div>
-                <div>
-                    <div class="flex justify-between items-center gap-3">
-                        <img class="w-9 h-9" src="./assets/logo.png" alt="logo.png">
-                        <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
-                    </div>
+                <div class="hidden sm:hidden md:flex justify-between items-center gap-3">
+                    <img class="w-9 h-9" src="./assets/logo.png" alt="logo.png">
+                    <h3
+                        class="text-xl md:text-3xl font-extrabold text-center bg-gradient-to-b from-purple-500 via-orange-500 to-yellow-500 text-transparent bg-clip-text">
+                        Donate Bangladesh</h3>
                 </div>
-                <div>
-                    <div class="flex justify-between items-center gap-3">
-                        <img src="./assets/coin.png" alt="coin.png">
-                        <h3 class="text-xl font-medium text-normal">5500 BDT</h3>
-                    </div>
+                <div
+                    class="flex justify-between items-center gap-3 border-double border-2 border-amber-400 px-3 py-2 bg-primary">
+                    <img src="./assets/coin.png" alt="coin.png">
+                    <h3 class="text-xl font-medium text-normal"><span id="available-balance"
+                            class="text-amber-500">99500</span><Span class="text-black ml-2">BDT.</Span></h3>
                 </div>
             </nav>
         </div>

@@ -2,19 +2,57 @@
 document.getElementById("blog-button").addEventListener("click", function () {
   window.location.href = "blog.html";
 });
-// -----------------------------Input-Donation-Function---------------------------------------------
-const inputDonationButton = document.getElementById("input-donation-button");
-inputDonationButton.addEventListener("click", function (event) {
+// -----------------------------Input-Donation-Function---01--------------------------------------------
+const inputDonationButton1 = document.getElementById("input-donation-button1");
+inputDonationButton1.addEventListener("click", function (event) {
   event.preventDefault();
 
-  const inputAddBalance = parseFloat(
-    document.getElementById("input-add-balance").value
+  const inputAddBalance1 = parseFloat(
+    document.getElementById("input-add-balance1").value
   );
   const availableBalance = parseFloat(
     document.getElementById("available-balance").innerText
   );
-  const currentBalance = parseFloat(
-    document.getElementById("current-balance").innerText
+  const currentBalance1 = parseFloat(
+    document.getElementById("current-balance1").innerText
+  );
+  // -----Date-&-Time-Validation-----
+  const dateTime = new Date();
+
+  // -----Input-Validation-----
+
+  if (inputAddBalance1 < 0 || !isNaN(inputAddBalance1)) {
+    if (availableBalance > inputAddBalance1) {
+      const newAddBalance = availableBalance - inputAddBalance1;
+      document.getElementById("available-balance").innerText = newAddBalance;
+      document.getElementById(
+        "transaction-container1"
+      ).innerText = `${inputAddBalance1} Taka is Donated for Donate for Flood at Noakhali, Bangladesh.`;
+      document.getElementById("date-time1").innerText = dateTime;
+
+      const newBalance = currentBalance1 + inputAddBalance1;
+      document.getElementById("current-balance1").innerText = newBalance;
+    } else {
+      alert("Insufficient Balance!");
+    }
+  } else {
+    alert("Invalid Number!");
+  }
+});
+
+// -----------------------------Input-Donation-Function---02--------------------------------------------
+const inputDonationButton2 = document.getElementById("input-donation-button2");
+inputDonationButton2.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const feniAddBalance = parseFloat(
+    document.getElementById("input-add-balance2").value
+  );
+  const availableBalance = parseFloat(
+    document.getElementById("available-balance").innerText
+  );
+  const currentBalance2 = parseFloat(
+    document.getElementById("current-balance2").innerText
   );
 
   // -----Date-&-Time-Validation-----
@@ -22,17 +60,56 @@ inputDonationButton.addEventListener("click", function (event) {
 
   // -----Input-Validation-----
 
-  if (inputAddBalance < 0 || !isNaN(inputAddBalance)) {
-    if (availableBalance > inputAddBalance) {
-      const newAddBalance = availableBalance - inputAddBalance;
+  if (feniAddBalance < 0 || !isNaN(feniAddBalance)) {
+    if (availableBalance > feniAddBalance) {
+      const newAddBalance = availableBalance - feniAddBalance;
       document.getElementById("available-balance").innerText = newAddBalance;
       document.getElementById(
-        "transaction-container"
-      ).innerText = `${inputAddBalance} Taka is Donated for Donate for Flood at Noakhali, Bangladesh.`;
-      document.getElementById("date-time").innerText = dateTime;
+        "transaction-container2"
+      ).innerText = `${feniAddBalance} Taka is Donated for Donate for Flood at Feni, Bangladesh.`;
+      document.getElementById("date-time2").innerText = dateTime;
 
-      const newBalance = currentBalance + inputAddBalance;
-      document.getElementById("current-balance").innerText = newBalance;
+      const newBalance = currentBalance2 + feniAddBalance;
+      document.getElementById("current-balance2").innerText = newBalance;
+    } else {
+      alert("Insufficient Balance!");
+    }
+  } else {
+    alert("Invalid Number!");
+  }
+});
+
+// -----------------------------Input-Donation-Function---03--------------------------------------------
+const inputDonationButton3 = document.getElementById("input-donation-button3");
+inputDonationButton3.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const quotaAddBalance = parseFloat(
+    document.getElementById("input-add-balance3").value
+  );
+  const availableBalance = parseFloat(
+    document.getElementById("available-balance").innerText
+  );
+  const currentBalance3 = parseFloat(
+    document.getElementById("current-balance3").innerText
+  );
+
+  // -----Date-&-Time-Validation-----
+  const dateTime = new Date();
+
+  // -----Input-Validation-----
+
+  if (quotaAddBalance < 0 || !isNaN(quotaAddBalance)) {
+    if (availableBalance > quotaAddBalance) {
+      const newAddBalance = availableBalance - quotaAddBalance;
+      document.getElementById("available-balance").innerText = newAddBalance;
+      document.getElementById(
+        "transaction-container3"
+      ).innerText = `${quotaAddBalance} Taka is Donated for Donate at Quota Movement, Bangladesh.`;
+      document.getElementById("date-time3").innerText = dateTime;
+
+      const newBalance = currentBalance3 + quotaAddBalance;
+      document.getElementById("current-balance3").innerText = newBalance;
     } else {
       alert("Insufficient Balance!");
     }
