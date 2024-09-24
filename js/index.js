@@ -20,7 +20,7 @@ inputDonationButton1.addEventListener("click", function (event) {
   const dateTime = new Date();
 
   // -----Input-Validation-----
-  if (inputAddBalance1 < 0 || !isNaN(inputAddBalance1)) {
+  if (inputAddBalance1 > 0) {
     if (availableBalance > inputAddBalance1) {
       const newAddBalance = availableBalance - inputAddBalance1;
       document.getElementById("available-balance").innerText = newAddBalance;
@@ -60,7 +60,7 @@ inputDonationButton2.addEventListener("click", function (event) {
   const dateTime = new Date();
 
   // -----Input-Validation-----
-  if (feniAddBalance < 0 || !isNaN(feniAddBalance)) {
+  if (feniAddBalance > 0) {
     if (availableBalance > feniAddBalance) {
       const newAddBalance = availableBalance - feniAddBalance;
       document.getElementById("available-balance").innerText = newAddBalance;
@@ -100,7 +100,7 @@ inputDonationButton3.addEventListener("click", function (event) {
   const dateTime = new Date();
 
   // -----Input-Validation-----
-  if (quotaAddBalance < 0 || !isNaN(quotaAddBalance)) {
+  if (quotaAddBalance > 0) {
     if (availableBalance > quotaAddBalance) {
       const newAddBalance = availableBalance - quotaAddBalance;
       document.getElementById("available-balance").innerText = newAddBalance;
