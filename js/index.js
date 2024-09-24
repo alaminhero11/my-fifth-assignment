@@ -1,54 +1,60 @@
-// --------------------Function-Blog-Button-------------------
-
+// -----------------------------Input-Donation-Function---------------------------------------------
 document.getElementById("blog-button").addEventListener("click", function () {
   window.location.href = "blog.html";
 });
-// --------------------------
+// -----------------------------Input-Donation-Function---------------------------------------------
+const inputDonationButton = document.getElementById("input-donation-button");
+inputDonationButton.addEventListener("click", function (event) {
+  event.preventDefault();
 
-// --------------------Function-Donate-Button-------------------
+  const inputAddBalance = parseFloat(
+    document.getElementById("input-add-balance").value
+  );
+  const availableBalance = parseFloat(
+    document.getElementById("available-balance").innerText
+  );
+  const currentBalance = parseFloat(
+    document.getElementById("current-balance").innerText
+  );
 
-document
-  .getElementById("input-donation-button")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
+  // -----Input-Validation-----
 
-    const newAddBalance = getInputFieldValueById("input-add-balance");
-    const currentAmount = getTextFieldValueById("current-balance");
-    // --------------------------------------
+  if (inputAddBalance < 0 || !isNaN(inputAddBalance)) {
+    if (availableBalance > inputAddBalance) {
+      const newAddBalance = availableBalance - inputAddBalance;
+      document.getElementById("available-balance").innerText = newAddBalance;
+      document.getElementById(
+        "transaction-container"
+      ).innerText = `${inputAddBalance} Taka is Donated for Donate for Flood at Noakhali, Bangladesh.`;
 
-    // -------------------------------
-    if (currentAmount >= newAddBalance) {
-      const availableBalance = getTextFieldValueById("available-balance");
-      const newBalance = availableBalance - newAddBalance;
-      const totalAmount = currentAmount + newBalance;
-
-      document.getElementById("current-balance").innerText = totalAmount;
-
-      const p = document.createElement("p");
-      p.innerText = `${newAddBalance} Taka is Donated for Donate for Flood at Noakhali, Bangladesh.`;
-
-      document.getElementById("transaction-container").appendChild(p);
+      const newBalance = currentBalance + inputAddBalance;
+      document.getElementById("current-balance").innerText = newBalance;
     } else {
-      alert("Faild to Add Money");
+      alert("Insufficient Balance!");
     }
-  });
+  } else {
+    alert("Invalid Number!");
+  }
+});
+// --------------------------------------Button-Function--------------------------------------------
+// ---Donation-History-Click-Button---
+const historyButton = document.getElementById("history-button");
+const donationButton = document.getElementById("donation-button");
 
-// -------------------Function-Click-Hide-Button------------------
+// ---History-Button---
+historyButton.addEventListener("click", function () {
+  historyButton.classList.add("bg-secondary");
+  donationButton.classList.remove("bg-secondary");
 
-document
-  .getElementById("donation-button")
-  .addEventListener("click", function () {
-    showSectionById("main-section");
-    button.classList.toggle("active");
-  });
+  document.getElementById("main-section").classList.add("hidden");
+  document.getElementById("transaction-section").classList.remove("hidden");
+});
+// ---Donation-Button---
+donationButton.addEventListener("click", function () {
+  donationButton.classList.add("bg-secondary");
+  historyButton.classList.remove("bg-secondary");
 
-// --------------------------------------------------
-
-document
-  .getElementById("history-button")
-  .addEventListener("click", function () {
-    showSectionById("transaction-section");
-    button.classList.toggle("active");
-  });
-
-// --------------------------------------------------
+  document.getElementById("transaction-section").classList.add("hidden");
+  document.getElementById("main-section").classList.remove("hidden");
+});
+// -----------------------------------------------------------------------------------------

@@ -17,20 +17,30 @@ inputDonationButton.addEventListener("click", function (event) {
     document.getElementById("current-balance").innerText
   );
 
-  const newAddBalance = availableBalance - inputAddBalance;
-  document.getElementById("available-balance").innerText = newAddBalance;
-  document.getElementById(
-    "transaction-container"
-  ).innerText = `${inputAddBalance} Taka is Donated for Donate for Flood at Noakhali, Bangladesh.`;
+  // -----Input-Validation-----
 
-  const newBalance = currentBalance + inputAddBalance;
-  document.getElementById("current-balance").innerText = newBalance;
+  if (inputAddBalance < 0 || !isNaN(inputAddBalance)) {
+    if (availableBalance > inputAddBalance) {
+      const newAddBalance = availableBalance - inputAddBalance;
+      document.getElementById("available-balance").innerText = newAddBalance;
+      document.getElementById(
+        "transaction-container"
+      ).innerText = `${inputAddBalance} Taka is Donated for Donate for Flood at Noakhali, Bangladesh.`;
+
+      const newBalance = currentBalance + inputAddBalance;
+      document.getElementById("current-balance").innerText = newBalance;
+    } else {
+      alert("Insufficient Balance!");
+    }
+  } else {
+    alert("Invalid Number!");
+  }
 });
-
 // --------------------------------------Button-Function--------------------------------------------
 // ---Donation-History-Click-Button---
 const historyButton = document.getElementById("history-button");
 const donationButton = document.getElementById("donation-button");
+
 // ---History-Button---
 historyButton.addEventListener("click", function () {
   historyButton.classList.add("bg-secondary");
