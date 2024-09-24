@@ -4,9 +4,6 @@ document.getElementById("blog-button").addEventListener("click", function () {
   window.location.href = "blog.html";
 });
 // --------------------------
-document.getElementById("home-button").addEventListener("click", function () {
-  window.location.href = "index.html";
-});
 
 // --------------------Function-Donate-Button-------------------
 
@@ -30,7 +27,7 @@ document
       const p = document.createElement("p");
       p.innerText = `${newAddBalance} Taka is Donated for Donate for Flood at Noakhali, Bangladesh.`;
 
-      document.getElementById("transaction-container").appendChild(p, date);
+      document.getElementById("transaction-container").appendChild(p);
     } else {
       alert("Faild to Add Money");
     }

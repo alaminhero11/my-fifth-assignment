@@ -24,11 +24,3 @@ function showSectionById(id) {
 }
 
 // ------------------------------------------
-
-// ---------------------Available-Balance-Function----------------
-
-// function getTextFieldValueById(id) {
-//   const availableBalance = document.getElementById(id).innerText;
-//   const newAvailableBalance = parseFloat(availableBalance);
-//   return newAvailableBalance;
-// }
